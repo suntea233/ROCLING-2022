@@ -37,7 +37,7 @@ class BertNER(nn.Module):
 
         lstm_output, _ = self.bilstm(sequence_output)
 
-        # 得到判别值
+
         logits = self.classifier(lstm_output)
         return TokenClassifierOutput(
             logits=logits,
